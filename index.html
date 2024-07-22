@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ragic</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js"></script>
+  </head>
+  <body>
+    <form>
+      <select name="select-1" id="select-single">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+      <select name="select-2" id="select-mutiple" multiple>
+        <option value="1">1</option>
+        <option value="2">22222222222222</option>
+        <option value="3">3</option>
+      </select>
+      <select name="select-3" id="select-mutiple" multiple>
+        <option value="1">11111111111111</option>
+        <option value="2">22222222222222</option>
+        <option value="3" selected>22222222222222</option>
+        <option value="4" selected>22222222222222</option>
+        <option value="5" selected>22222222222222</option>
+        <option value="6">22222222222222</option>
+        <option value="7">22222222222222</option>
+        <option value="8">22222222222222</option>
+        <option value="9">22222222222222</option>
+        <option value="10">22222222222222</option>
+        <option value="11">22222222222222</option>
+        <option value="12">22222222222222</option>
+        <option value="13">22222222222222</option>
+        <option value="14">22222222222222</option>
+        <option value="15">22222222222222</option>
+      </select>
+      <button type="submit">submit</button>
+    </form>
+  </body>
+  <script>
+    myUI.dropdown();
+
+    const formElem = document.querySelector("form");
+    formElem.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const formData = new FormData(e.target);
+      console.log(formData.getAll("select-1"));
+      console.log(formData.getAll("select-2"));
+      console.log(formData.getAll("select-3"));
+    });
+  </script>
+</html>

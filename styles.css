@@ -1,0 +1,61 @@
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+.my-ui-select {
+  position: relative;
+  display: inline-block;
+  width: 120px;
+  cursor: pointer;
+}
+
+.my-ui-select.block {
+  display: block;
+}
+
+.my-ui-select-display {
+  border: 1px solid black;
+  height: 20px;
+  padding: 0.2rem;
+  padding-right: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.my-ui-select-display::after {
+  content: "ˇ";
+  position: absolute;
+  right: 0;
+  top: calc(50% - 0.25rem);
+  width: 1rem;
+  height: 0.5rem;
+  text-align: center;
+}
+
+.my-ui-dropdown {
+  display: none;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  max-height: 120px;
+  max-width: 80px;
+  overflow: scroll;
+  border: 1px solid black;
+  top: 103%;
+  left: 0;
+  right: 0;
+  min-width: calc(100% - 2px);
+}
+
+.my-ui-dropdown.show {
+  display: block;
+}
+
+.my-ui-dropdown > li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
